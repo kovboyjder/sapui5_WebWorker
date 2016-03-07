@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGWEPM_SALESORDERS_SRV" xml:lang="en" sap:schema-version="1"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="SalesOrder" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SoId"/>
+                </Key>
+                <Property Name="SoId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Order ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Note" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BuyerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Business Partner ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BuyerName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Company" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="GrossAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:label="Gross Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:label="Net Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TaxAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:label="Tax Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="SalesOrderItemSet" Relationship="ZGWEPM_SALESORDERS_SRV.SalesOrderSalesOrderItems" FromRole="FromRole_SalesOrderSalesOrderItems" ToRole="ToRole_SalesOrderSalesOrderItems"/>
+            </EntityType>
+            <EntityType Name="SalesOrderItem" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SoId"/>
+                    <PropertyRef Name="SoItemPos"/>
+                </Key>
+                <Property Name="SoId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Order ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SoItemPos" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Item Position" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProductId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Product ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Note" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="GrossAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:label="Gross Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:label="Net Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TaxAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:label="Tax Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Quantity" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="QuantityUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Unit of Measure" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+            </EntityType>
+            <Association Name="SalesOrderSalesOrderItems" sap:content-version="1">
+                <End Type="ZGWEPM_SALESORDERS_SRV.SalesOrder" Multiplicity="1" Role="FromRole_SalesOrderSalesOrderItems"/>
+                <End Type="ZGWEPM_SALESORDERS_SRV.SalesOrderItem" Multiplicity="*" Role="ToRole_SalesOrderSalesOrderItems"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalesOrderSalesOrderItems">
+                        <PropertyRef Name="SoId"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalesOrderSalesOrderItems">
+                        <PropertyRef Name="SoId"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZGWEPM_SALESORDERS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="SalesOrderSet" EntityType="ZGWEPM_SALESORDERS_SRV.SalesOrder" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="SalesOrderItemSet" EntityType="ZGWEPM_SALESORDERS_SRV.SalesOrderItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="SalesOrderSalesOrderItemsSet" Association="ZGWEPM_SALESORDERS_SRV.SalesOrderSalesOrderItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SalesOrderSet" Role="FromRole_SalesOrderSalesOrderItems"/>
+                    <End EntitySet="SalesOrderItemSet" Role="ToRole_SalesOrderSalesOrderItems"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="./sap/ZGWEPM_SALESORDERS_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link rel="latest-version" href="./sap/ZGWEPM_SALESORDERS_SRV/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

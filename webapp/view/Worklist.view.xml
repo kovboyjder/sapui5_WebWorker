@@ -1,0 +1,47 @@
+<mvc:View controllerName="plaut.controller.Worklist" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page id="page" navButtonPress="onNavBack" showNavButton="true" title="{i18n>worklistViewTitle}">
+		<content>
+			<Table busyIndicatorDelay="{worklistView>/tableBusyDelay}" class="sapUiResponsiveMargin" growing="true" growingScrollToLoad="true"
+				id="table" items="{ path: '/SalesOrderSet', sorter: { path: 'SoId', descending: false } }" noDataText="{i18n>tableNoDataText}"
+				updateFinished="onUpdateFinished" width="auto">
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column id="nameColumn">
+						<Text id="nameColumnTitle" text="{i18n>tableNameColumnTitle}"/>
+					</Column>
+					<Column id="unitNumberColumn">
+						<Text id="unitNumberColumnTitle" text="{i18n>tableUnitNumberColumnTitle}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem press="onPress" type="Navigation">
+						<cells>
+							<ObjectIdentifier title="{SoId}"/>
+							<ObjectNumber number="{ path: 'NetAmount', formatter: '.formatter.numberUnit' }" unit="{CurrencyCode}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<footer>
+			<OverflowToolbar id="footerToolbar">
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://action" id="shareButton" press="onSharePress" tooltip="{i18n>shareTooltip}">
+					<dependents>
+						<ActionSheet id="shareSheet" placement="Top" showCancelButton="true">
+							<buttons>
+								<Button icon="sap-icon://email" id="shareEmail" press="onShareEmailPress" text="{i18n>shareSendEmail}"/>
+								<Button icon="sap-icon://jam" id="shareInJam" press="onShareInJamPress" text="{i18n>shareOnJamTitle}" visible="{FLP>/isShareInJamActive}"/>
+								<footerbar:AddBookmarkButton appData="{ path: 'worklistView>/saveAsTileTitle', formatter: '.formatter.shareTileData' }" id="shareTile"/>
+							</buttons>
+						</ActionSheet>
+					</dependents>
+				</Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

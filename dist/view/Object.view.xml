@@ -1,0 +1,27 @@
+<mvc:View controllerName="plaut.controller.Object" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns="sap.m">
+	<Page busy="{objectView>/busy}" busyIndicatorDelay="{objectView>/delay}" id="page" navButtonPress="onNavBack" showNavButton="true"
+		title="{i18n>objectTitle}">
+		<content>
+			<ObjectHeader id="objectHeader" number="{ path: 'NetAmount', formatter: '.formatter.numberUnit' }" numberUnit="{CurrencyCode}"
+				title="{SoId}"></ObjectHeader>
+					
+		</content>
+		<footer>
+			<OverflowToolbar id="footerToolbar">
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://action" id="shareButton" press="onSharePress" tooltip="{i18n>shareTooltip}">
+					<dependents>
+						<ActionSheet id="shareSheet" placement="Top" showCancelButton="true">
+							<buttons>
+								<Button icon="sap-icon://email" id="shareEmail" press="onShareEmailPress" text="{i18n>shareSendEmail}"/>
+								<Button icon="sap-icon://jam" id="shareInJam" press="onShareInJamPress" text="{i18n>shareOnJamTitle}" visible="{FLP>/isShareInJamActive}"/>
+								<footerbar:AddBookmarkButton appData="{ path: 'objectView>/saveAsTileTitle', formatter: '.formatter.shareTileData' }" id="shareTile"/>
+							</buttons>
+						</ActionSheet>
+					</dependents>
+				</Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

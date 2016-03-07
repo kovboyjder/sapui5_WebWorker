@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+		<title>Test promises</title> 
+
+		<script id="sap-ui-bootstrap"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-preload="sync"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"plaut": "./"}'>
+		</script>
+	
+	
+
+		<script>
+         sap.ui.getCore().attachInit(function () {
+         	new sap.m.Shell({
+         		showLogout: true,
+				app: new sap.ui.core.ComponentContainer({
+					height : "100%",
+					name : "plaut"
+				})
+			}).placeAt("content");
+         });
+         
+     	
+			$(document).ready(function()
+		{
+		    $(window).bind("beforeunload", function() { 
+		        
+		    });
+		});
+		</script>
+	<script src='https://webide-s0015764674trial.dispatcher.hanatrial.ondemand.com/plugins/pluginrepository/hybrid/cordovafacade/cordova.js' data-original-url='index.html'></script>
+<style>#interactive.viewport video{width:320px;height:240px;}
+#interactive.viewport .drawingBuffer{width:320px;height:240px;position:absolute;}</style></head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

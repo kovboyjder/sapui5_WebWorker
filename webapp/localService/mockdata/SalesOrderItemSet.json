@@ -1,0 +1,151 @@
+[{
+	"SoId": "SoId 1",
+	"SoItemPos": "SoItemPos 1",
+	"ProductId": "ProductId 1",
+	"Note": "Note 1",
+	"CurrencyCode": "CurrencyCode 1",
+	"GrossAmount": 8524.12,
+	"NetAmount": 6307.13,
+	"TaxAmount": 247.15,
+	"Quantity": 6206.59,
+	"QuantityUnit": "QuantityUnit 1",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 1',SoItemPos='SoItemPos 1')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 2",
+	"SoItemPos": "SoItemPos 2",
+	"ProductId": "ProductId 2",
+	"Note": "Note 2",
+	"CurrencyCode": "CurrencyCode 2",
+	"GrossAmount": 6113.06,
+	"NetAmount": 9916.14,
+	"TaxAmount": 6950.08,
+	"Quantity": 3891.38,
+	"QuantityUnit": "QuantityUnit 2",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 2',SoItemPos='SoItemPos 2')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 3",
+	"SoItemPos": "SoItemPos 3",
+	"ProductId": "ProductId 3",
+	"Note": "Note 3",
+	"CurrencyCode": "CurrencyCode 3",
+	"GrossAmount": 9142.04,
+	"NetAmount": 8455.87,
+	"TaxAmount": 5653.69,
+	"Quantity": 7480.99,
+	"QuantityUnit": "QuantityUnit 3",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 3',SoItemPos='SoItemPos 3')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 4",
+	"SoItemPos": "SoItemPos 4",
+	"ProductId": "ProductId 4",
+	"Note": "Note 4",
+	"CurrencyCode": "CurrencyCode 4",
+	"GrossAmount": 6066.56,
+	"NetAmount": 1506.95,
+	"TaxAmount": 2902.41,
+	"Quantity": 5566.52,
+	"QuantityUnit": "QuantityUnit 4",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 4',SoItemPos='SoItemPos 4')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 5",
+	"SoItemPos": "SoItemPos 5",
+	"ProductId": "ProductId 5",
+	"Note": "Note 5",
+	"CurrencyCode": "CurrencyCode 5",
+	"GrossAmount": 4478.76,
+	"NetAmount": 944.43,
+	"TaxAmount": 9409.36,
+	"Quantity": 9614.65,
+	"QuantityUnit": "QuantityUnit 5",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 5',SoItemPos='SoItemPos 5')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 6",
+	"SoItemPos": "SoItemPos 6",
+	"ProductId": "ProductId 6",
+	"Note": "Note 6",
+	"CurrencyCode": "CurrencyCode 6",
+	"GrossAmount": 877.66,
+	"NetAmount": 5470.49,
+	"TaxAmount": 3098.39,
+	"Quantity": 9145.96,
+	"QuantityUnit": "QuantityUnit 6",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 6',SoItemPos='SoItemPos 6')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 7",
+	"SoItemPos": "SoItemPos 7",
+	"ProductId": "ProductId 7",
+	"Note": "Note 7",
+	"CurrencyCode": "CurrencyCode 7",
+	"GrossAmount": 9423.96,
+	"NetAmount": 2887.29,
+	"TaxAmount": 2972.54,
+	"Quantity": 104.14,
+	"QuantityUnit": "QuantityUnit 7",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 7',SoItemPos='SoItemPos 7')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 8",
+	"SoItemPos": "SoItemPos 8",
+	"ProductId": "ProductId 8",
+	"Note": "Note 8",
+	"CurrencyCode": "CurrencyCode 8",
+	"GrossAmount": 7796.48,
+	"NetAmount": 5531.88,
+	"TaxAmount": 9936.37,
+	"Quantity": 1662.74,
+	"QuantityUnit": "QuantityUnit 8",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 8',SoItemPos='SoItemPos 8')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 9",
+	"SoItemPos": "SoItemPos 9",
+	"ProductId": "ProductId 9",
+	"Note": "Note 9",
+	"CurrencyCode": "CurrencyCode 9",
+	"GrossAmount": 1869.39,
+	"NetAmount": 7758.42,
+	"TaxAmount": 9603.19,
+	"Quantity": 4430.38,
+	"QuantityUnit": "QuantityUnit 9",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 9',SoItemPos='SoItemPos 9')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}, {
+	"SoId": "SoId 10",
+	"SoItemPos": "SoItemPos 10",
+	"ProductId": "ProductId 10",
+	"Note": "Note 10",
+	"CurrencyCode": "CurrencyCode 10",
+	"GrossAmount": 8561.79,
+	"NetAmount": 5381.73,
+	"TaxAmount": 2661.92,
+	"Quantity": 9429.32,
+	"QuantityUnit": "QuantityUnit 10",
+	"__metadata": {
+		"uri": "SalesOrderItemSet(SoId='SoId 10',SoItemPos='SoItemPos 10')",
+		"type": "ZGWEPM_SALESORDERS_SRV.SalesOrderItem"
+	}
+}]
