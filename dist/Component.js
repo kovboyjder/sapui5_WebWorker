@@ -5,6 +5,8 @@ sap.ui.define([
 	"plaut/controller/ErrorHandler"
 ], function(UIComponent, Device, models, ErrorHandler) {
 	"use strict";
+	
+	//Hello World'
 
 	return UIComponent.extend("plaut.Component", {
 
